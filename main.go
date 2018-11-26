@@ -2,15 +2,7 @@ package main
 
 import "fmt"
 
-type Foo struct {
-	ID int
-}
-
-type Bar struct {
-	ID int
-}
-
-type Baz struct {
+type A struct {
 	ID int
 }
 
