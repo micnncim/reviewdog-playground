@@ -10,6 +10,10 @@ type Bar struct {
 	ID int
 }
 
+type Baz struct {
+	ID int
+}
+
 func main() {
 	fmt.Println("hello world")
 }
