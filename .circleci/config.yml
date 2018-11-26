@@ -9,6 +9,6 @@ jobs:
       - run:
           name: Run reviewdog
           command: |
-            go get -u github.com/haya14busa/reviewdog/cmd/reviewdog
-            go get -u golang.org/x/lint/golint
+            go get github.com/haya14busa/reviewdog/cmd/reviewdog
+            go get golang.org/x/lint/golint
             make reviewdog
