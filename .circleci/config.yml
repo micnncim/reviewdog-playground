@@ -11,9 +11,9 @@ jobs:
           command: |
             go get github.com/reviewdog/reviewdog/cmd/reviewdog
             go get golang.org/x/lint/golint
-            go get github.com/dominikh/go-tools/cmd/unused
-            go get github.com/dominikh/go-tools/cmd/gosimple
-            go get github.com/dominikh/go-tools/cmd/staticcheck
+            go get honnef.co/go/tools/cmd/unused
+            go get honnef.co/go/tools/cmd/gosimple
+            go get honnef.co/go/tools/cmd/staticcheck
             go get github.com/kisielk/errcheck
             go get github.com/client9/misspell/cmd/misspell
             go get mvdan.cc/unparam
