@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: /go/src/github.com/micnncim/reviewdog-test
+    working_directory: /go/src/github.com/micnncim/reviewdog-playground
     docker:
       - image: circleci/golang:latest
     steps:
@@ -9,6 +9,14 @@ jobs:
       - run:
           name: Run reviewdog
           command: |
-            go get github.com/haya14busa/reviewdog/cmd/reviewdog
+            go get github.com/reviewdog/reviewdog/cmd/reviewdog
             go get golang.org/x/lint/golint
-            make reviewdog
+            go get github.com/go-tools/cmd/unused
+            go get github.com/go-tools/cmd/gosimple
+            go get github.com/go-tools/cmd/staticcheck
+            go get github.com/kisielk/errcheck
+            go get github.com/client9/misspell/cmd/misspell
+            go get mvdan.cc/unparam
+            go get github.com/mgechev/revive
+            go get github.com/golangci/golangci-lint/cmd/golangci-lint
+            reviewdog -reporter='github-pr-review'
